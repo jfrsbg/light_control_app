@@ -28,6 +28,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Theme.of(context).primaryColor,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.lightbulb),
@@ -43,10 +44,12 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Theme.of(context).accentColor,
         onTap: _onItemTapped,
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        iconSize: 28,
+        selectedIconTheme: IconThemeData(color: Theme.of(context).accentColor, size: 35),
       ),
     );
   }

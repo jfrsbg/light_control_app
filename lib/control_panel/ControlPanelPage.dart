@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:light_control/control_panel/components/BodyControlPanel.dart';
+import 'package:light_control/control_panel/components/HeaderControlPanel.dart';
 
 class ControlPanelPage extends StatelessWidget {
   @override
@@ -10,22 +12,15 @@ class ControlPanelPage extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           color: Theme.of(context).accentColor,
         ),
+        //Header of Page
         SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 40),
-            child: Row(
-              children: <Widget>[
-                Container(
-                  width: 115,
-                  child: Text(
-                    "Control Panel",
-                    style: Theme.of(context).textTheme.headline1,
-                  ),
-                ),
-              ],
-            ),
+          child: Column(
+            children: <Widget>[
+              HeaderControlPanel(),
+              BodyControlPanel()
+            ],
           )
-        )
+        ),
       ],
     );
   }
