@@ -9,16 +9,17 @@ class ControlPanelPage extends StatelessWidget {
       children: <Widget>[
         Container(
           width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
           color: Theme.of(context).accentColor,
         ),
         //Header of Page
         SafeArea(
-          child: Column(
-            children: <Widget>[
-              HeaderControlPanel(),
-              BodyControlPanel()
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                HeaderControlPanel(),
+                BodyControlPanel()
+              ],
+            ),
           )
         ),
       ],

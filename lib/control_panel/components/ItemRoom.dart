@@ -4,7 +4,7 @@ class ItemRoom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.all(5),
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20))
       ),
@@ -12,6 +12,7 @@ class ItemRoom extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
+
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SizedBox(height: 15,),
