@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ItemRoom extends StatelessWidget {
+  final String image;
+  final String room;
+  final int numberOfLights;
+
+  const ItemRoom({this.image, this.room, this.numberOfLights}) ;
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(5),
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20))
       ),
@@ -12,15 +16,15 @@ class ItemRoom extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
-
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(height: 15,),
-            Image.asset("assets/images/bed.png", width: 70, fit: BoxFit.cover,),
-            SizedBox(height: 15,),
-            Text("Bed Room", style: Theme.of(context).textTheme.headline6,),
+            Image.asset(image, width: 60, fit: BoxFit.cover,),
+            SizedBox(height: 25,),
+            Text(room, style: Theme.of(context).textTheme.headline6,),
             SizedBox(height: 5,),
-            Text("4 Lights", style: Theme.of(context).textTheme.subtitle2,),
+            Text("$numberOfLights Lights", style: Theme.of(context).textTheme.subtitle2,),
             SizedBox(width: 150,)
           ],
         ),

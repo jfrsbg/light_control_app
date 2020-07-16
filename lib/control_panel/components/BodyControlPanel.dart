@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:light_control/control_panel/components/ItemRoom.dart';
 
 class BodyControlPanel extends StatelessWidget {
@@ -23,28 +25,18 @@ class BodyControlPanel extends StatelessWidget {
               ],
             ),
           ),
-          Row(
+          GridView.count(
+            padding: EdgeInsets.all(10),
+            physics: ScrollPhysics(),
+            shrinkWrap: true,
+            crossAxisCount: MediaQuery.of(context).orientation == Orientation.portrait ? 2 : 3,
             children: <Widget>[
-              Flexible(
-                fit: FlexFit.tight,
-                child: ItemRoom(),
-              ),
-              Flexible(
-                fit: FlexFit.tight,
-                child: ItemRoom(),
-              ),
-            ],
-          ),
-          Row(
-            children: <Widget>[
-              Flexible(
-                fit: FlexFit.tight,
-                child: ItemRoom(),
-              ),
-              Flexible(
-                fit: FlexFit.tight,
-                child: ItemRoom(),
-              ),
+              ItemRoom(image: "assets/images/bed.png", numberOfLights: 4, room: "Bed Room",),
+              ItemRoom(image: "assets/images/room.png", numberOfLights: 2, room: "Living Room",),
+              ItemRoom(image: "assets/images/kitchen.png", numberOfLights: 5, room: "Kitchen",),
+              ItemRoom(image: "assets/images/bathtube.png", numberOfLights: 1, room: "Bathroom",),
+              ItemRoom(image: "assets/images/house.png", numberOfLights: 5, room: "Outdoor",),
+              ItemRoom(image: "assets/images/balcony.png", numberOfLights: 2, room: "Balcony",),
             ],
           ),
          ],
