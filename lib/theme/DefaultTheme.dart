@@ -13,6 +13,7 @@ class DefaultTheme {
 
    static ThemeData themeDataDefault() => base.copyWith(
 	  primaryColor: DefaultColors.primary,
+	  primaryColorDark: DefaultColors.primaryDark,
 	  accentColor: DefaultColors.secondary,
 	  backgroundColor: DefaultColors.background,
 	  textTheme: _textThemeDefault(base.textTheme)
@@ -21,6 +22,7 @@ class DefaultTheme {
 
 class DefaultColors{
    static Color primary = Colors.white;
+   static Color primaryDark = Color(0xff093B7B);
    static Color secondary = Color(0xff1453a6);
    static Color background = Color(0xfff5f7fa);
    static Color orange = Color(0xfffcb355);

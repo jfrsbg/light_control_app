@@ -19,11 +19,10 @@ class MenuItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            SizedBox(height: 10,),
+            Image.asset(image, width: 55, fit: BoxFit.cover,),
             SizedBox(height: 15,),
-            Image.asset(image, width: 60, fit: BoxFit.cover,),
-            SizedBox(height: 25,),
             Text(room, style: Theme.of(context).textTheme.headline6,),
-            SizedBox(height: 5,),
             Text("$numberOfLights Lights", style: Theme.of(context).textTheme.subtitle2,),
             SizedBox(width: 150,)
           ],

@@ -19,12 +19,19 @@ class _RoomPageState extends State<RoomPage> {
         SafeArea(
             child: Column(
               children: <Widget>[
-                HeaderRoom(),
+                HeaderRoom(
+                  roomName: "Bed Room",
+                  lights: 4,
+                ),
                 BodyRoom()
               ],
             )
         ),
-
+        Positioned(
+          top: 0,
+          right: 50,
+          child: SafeArea(child: Image.asset("assets/images/light_bulb.png", width: 90,)),
+        ),
       ],
     );
   }
