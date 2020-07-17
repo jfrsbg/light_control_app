@@ -7,7 +7,7 @@ class DefaultTheme {
 	  headline1: TextStyle(color: DefaultColors.primary, fontSize: 32, fontWeight: FontWeight.bold),
 	  headline6: TextStyle(color: DefaultColors.gray, fontSize: 22, fontWeight: FontWeight.bold),
 	  bodyText1: TextStyle(color: DefaultColors.secondary, fontSize: 22, fontWeight: FontWeight.bold),
-	  //subtitle1: TextStyle(color: Color(0xffb4bdca), fontSize: 17),
+	  subtitle1: TextStyle(color: DefaultColors.secondary, fontSize: 16, fontWeight: FontWeight.bold),
 	  subtitle2: TextStyle(fontSize: 16, color: DefaultColors.orange, fontWeight: FontWeight.bold),
    );
 

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:light_control/control_panel/components/ItemRoom.dart';
+import 'package:light_control/control_panel/components/MenuItem.dart';
 
 class BodyControlPanel extends StatelessWidget {
   @override
@@ -31,12 +31,12 @@ class BodyControlPanel extends StatelessWidget {
             shrinkWrap: true,
             crossAxisCount: MediaQuery.of(context).orientation == Orientation.portrait ? 2 : 3,
             children: <Widget>[
-              ItemRoom(image: "assets/images/bed.png", numberOfLights: 4, room: "Bed Room",),
-              ItemRoom(image: "assets/images/room.png", numberOfLights: 2, room: "Living Room",),
-              ItemRoom(image: "assets/images/kitchen.png", numberOfLights: 5, room: "Kitchen",),
-              ItemRoom(image: "assets/images/bathtube.png", numberOfLights: 1, room: "Bathroom",),
-              ItemRoom(image: "assets/images/house.png", numberOfLights: 5, room: "Outdoor",),
-              ItemRoom(image: "assets/images/balcony.png", numberOfLights: 2, room: "Balcony",),
+              MenuItem(image: "assets/images/bed.png", numberOfLights: 4, room: "Bed Room",),
+              MenuItem(image: "assets/images/room.png", numberOfLights: 2, room: "Living Room",),
+              MenuItem(image: "assets/images/kitchen.png", numberOfLights: 5, room: "Kitchen",),
+              MenuItem(image: "assets/images/bathtube.png", numberOfLights: 1, room: "Bathroom",),
+              MenuItem(image: "assets/images/house.png", numberOfLights: 5, room: "Outdoor",),
+              MenuItem(image: "assets/images/balcony.png", numberOfLights: 2, room: "Balcony",),
             ],
           ),
          ],

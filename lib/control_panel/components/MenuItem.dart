@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ItemRoom extends StatelessWidget {
+class MenuItem extends StatelessWidget {
   final String image;
   final String room;
   final int numberOfLights;
 
-  const ItemRoom({this.image, this.room, this.numberOfLights}) ;
+  const MenuItem({this.image, this.room, this.numberOfLights}) ;
   @override
   Widget build(BuildContext context) {
     return Card(
