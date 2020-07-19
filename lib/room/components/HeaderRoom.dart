@@ -9,59 +9,70 @@ class HeaderRoom extends StatelessWidget {
   const HeaderRoom({this.roomName, this.lights}) ;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 25, right: 25, top: 40, bottom: 25),
-      child: Column(
-        children: <Widget>[
-          Row(
+    return Stack(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(left: 25, right: 25, top: 40, bottom: 25),
+          child: Column(
             children: <Widget>[
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          width: 115,
+                          child: Text(
+                            this.roomName,
+                            style: Theme.of(context).textTheme.headline1,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5),
+                child: Row(
                   children: <Widget>[
-                    Container(
-                      width: 115,
-                      child: Text(
-                        this.roomName,
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
+                    Text("$lights Lights", style: Theme.of(context).textTheme.subtitle2,)
+                  ],
+                ),
+              ),
+              SizedBox(height: 15,),
+              Container(
+                height: 60,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    ItemRoom(
+                      title: "Main Light",
+                      icon: FontAwesomeIcons.lightbulb,
+                    ),
+                    ItemRoom(
+                      title: "Desk Lights",
+                      icon: FontAwesomeIcons.clipboard,
+                    ),
+                    ItemRoom(
+                      title: "Bed",
+                      icon: FontAwesomeIcons.bed,
                     ),
                   ],
                 ),
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 5),
-            child: Row(
-              children: <Widget>[
-                Text("$lights Lights", style: Theme.of(context).textTheme.subtitle2,)
-              ],
-            ),
-          ),
-          SizedBox(height: 15,),
-          Container(
-            height: 60,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                ItemRoom(
-                  title: "Main Light",
-                  icon: FontAwesomeIcons.lightbulb,
-                ),
-                ItemRoom(
-                  title: "Desk Lights",
-                  icon: FontAwesomeIcons.clipboard,
-                ),
-                ItemRoom(
-                  title: "Bed",
-                  icon: FontAwesomeIcons.bed,
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
+        ),
+
+        //light bulb image
+        Positioned(
+          top: 0,
+          right: 50,
+          child: SafeArea(child: Image.asset("assets/images/light_bulb.png", width: 90,)),
+        ),
+      ],
     );
   }
 }

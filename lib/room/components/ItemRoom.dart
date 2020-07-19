@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:get_it/get_it.dart';
+import 'package:light_control/stores/SelectItemRoomStore.dart';
+import 'package:mobx/mobx.dart';
 
 class ItemRoom extends StatefulWidget {
 
@@ -12,13 +16,25 @@ class ItemRoom extends StatefulWidget {
 }
 
 class _ItemRoomState extends State<ItemRoom> {
+  final selectItem = GetIt.I.get<SelectItemRoomStore>();
   bool selected = false;
 
   void onTap(){
+    selectItem.unselectAll();
     setState(() {
-      selected = !selected;
+      selected = true;
     });
-    print("asd");
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    autorun((_){
+      setState(() {
+        selected = !selectItem.unselected;
+      });
+    });
   }
 
   @override
@@ -43,7 +59,10 @@ class _ItemRoomState extends State<ItemRoom> {
                 ),
                 Expanded(
                     flex: 3,
-                    child: Text(this.widget.title, textAlign: TextAlign.center, style: Theme.of(context).textTheme.subtitle1,)
+                    child: Text(this.widget.title,
+                      textAlign: TextAlign.center,
+                      style: selected ? Theme.of(context).textTheme.bodyText2 : Theme.of(context).textTheme.subtitle1,
+                    )
                 )
               ],
             ),
