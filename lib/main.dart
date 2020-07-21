@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:light_control/AppRoutes.dart';
 import 'package:light_control/Injectors.dart';
 import 'package:light_control/MainScreen.dart';
 import 'package:light_control/theme/DefaultTheme.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: DefaultTheme.themeDataDefault(),
       home: MainScreen(),
+      onGenerateRoute: AppRoutes.routes,
     );
   }
 }

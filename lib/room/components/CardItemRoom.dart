@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:get_it/get_it.dart';
 import 'package:light_control/stores/SelectItemRoomStore.dart';
 import 'package:mobx/mobx.dart';
 
-class ItemRoom extends StatefulWidget {
+class CardItemRoom extends StatefulWidget {
 
   final IconData icon;
   final String title;
 
-  const ItemRoom({this.icon, this.title});
+  const CardItemRoom({this.icon, this.title});
 
   @override
-  _ItemRoomState createState() => _ItemRoomState();
+  _CardItemRoomState createState() => _CardItemRoomState();
 }
 
-class _ItemRoomState extends State<ItemRoom> {
+class _CardItemRoomState extends State<CardItemRoom> {
   final selectItem = GetIt.I.get<SelectItemRoomStore>();
   bool selected = false;
 

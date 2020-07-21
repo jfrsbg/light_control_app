@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:light_control/room/components/ItemRoom.dart';
+import 'package:light_control/room/components/CardItemRoom.dart';
 
 class HeaderRoom extends StatelessWidget {
   final String roomName;
@@ -47,15 +47,15 @@ class HeaderRoom extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
-                    ItemRoom(
+                    CardItemRoom(
                       title: "Main Light",
                       icon: FontAwesomeIcons.lightbulb,
                     ),
-                    ItemRoom(
+                    CardItemRoom(
                       title: "Desk Lights",
                       icon: FontAwesomeIcons.clipboard,
                     ),
-                    ItemRoom(
+                    CardItemRoom(
                       title: "Bed",
                       icon: FontAwesomeIcons.bed,
                     ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:light_control/AppRoutes.dart';
 import 'package:light_control/room/components/CustomSlider.dart';
-import 'package:light_control/theme/DefaultTheme.dart';
+import 'package:light_control/room/components/ItemColor.dart';
+import 'package:light_control/room/components/ItemScene.dart';
 
 class BodyRoom extends StatelessWidget {
   @override
@@ -18,6 +20,7 @@ class BodyRoom extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Row(
               children: <Widget>[
@@ -35,11 +38,67 @@ class BodyRoom extends StatelessWidget {
             SizedBox(height: 25,),
             Row(
               children: <Widget>[
-                Text("Colors", style: Theme.of(context).textTheme.bodyText1,)
+                Text("Colors", style: Theme.of(context).textTheme.bodyText1,),
+              ],
+            ),
+            SizedBox(height: 20,),
+            Wrap(
+              spacing: 15,
+              runSpacing: 15,
+              children: <Widget>[
+                ItemColor(color: Color(0xffff9b9b),),
+                ItemColor(color: Color(0xff94eb9e),),
+                ItemColor(color: Color(0xff94caeb),),
+                ItemColor(color: Color(0xffa594eb),),
+                ItemColor(color: Color(0xffde94eb),),
+                ItemColor(color: Color(0xffebd094),),
+                ButtonAdd()
+              ],
+            ),
+            SizedBox(height: 25,),
+            Row(
+              children: <Widget>[
+                Text("Scenes", style: Theme.of(context).textTheme.bodyText1,),
+              ],
+            ),
+            SizedBox(height: 25,),
+            GridView.count(
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 8,
+              childAspectRatio: 2.6,
+              shrinkWrap: true,
+              physics: ScrollPhysics(),
+              crossAxisCount: MediaQuery.of(context).orientation == Orientation.portrait ? 2 : 3,
+              children: <Widget>[
+                ItemScene(title: "Birthday", color: Color(0xffffa997)),
+                ItemScene(title: "Party", color: Color(0xffb593eb)),
+                ItemScene(title: "Relax", color: Color(0xff93d0eb)),
+                ItemScene(title: "Fun", color: Color(0xff9ae293)),
               ],
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ButtonAdd extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () => Navigator.of(context).pushNamed(AppRoutes.selectColor),
+      child: Container(
+        width: 27,
+        height: 27,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(
+              Radius.circular(20)
+          ),
+          boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 4, offset: Offset(1,1))],
+          color: Colors.white,
+        ),
+        child: Icon(FontAwesomeIcons.plus, size: 12,),
       ),
     );
   }
