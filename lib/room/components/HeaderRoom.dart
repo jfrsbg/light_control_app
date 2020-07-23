@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get_it/get_it.dart';
 import 'package:light_control/room/components/CardItemRoom.dart';
+import 'package:light_control/stores/room/RoomStore.dart';
 
 class HeaderRoom extends StatelessWidget {
   final String roomName;
   final int lights;
 
-  const HeaderRoom({this.roomName, this.lights}) ;
+  HeaderRoom({this.roomName, this.lights}) ;
+
+  final roomStore = GetIt.I.get<RoomStore>();
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -70,7 +76,41 @@ class HeaderRoom extends StatelessWidget {
         Positioned(
           top: 0,
           right: 50,
-          child: SafeArea(child: Image.asset("assets/images/light_bulb.png", width: 90,)),
+          child: SafeArea(
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                    top: 90,
+                    right: 35,
+                    child: Observer(
+                      builder: (_){
+                        return Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(20)
+                            ),
+                            boxShadow: [
+                              roomStore.lightOn ? BoxShadow(
+                                  color: Color(0xffff8c0c).withOpacity(roomStore.lightIntensity/roomStore.maxIntensity),
+                                  blurRadius: 15,
+                                  spreadRadius: 10
+                              ) : BoxShadow(),
+                            ],
+                            color:
+                            roomStore.lightOn ?
+                            Color(0xffff8c0c).withOpacity(roomStore.lightIntensity/roomStore.maxIntensity)
+                                : Colors.black,
+                          ),
+                          height: 20,
+                          width: 20,
+                        );
+                      },
+                    ),
+                  ),
+                  Image.asset("assets/images/light_bulb.png", width: 90,)
+                ],
+              )
+          ),
         ),
       ],
     );
