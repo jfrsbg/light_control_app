@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:light_control/control_panel/components/BodyControlPanel.dart';
-import 'package:light_control/control_panel/components/HeaderControlPanel.dart';
+import 'package:light_control/home/components/BodyHome.dart';
+import 'package:light_control/home/components/HeaderHome.dart';
 
-class ControlPanelPage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -16,8 +16,8 @@ class ControlPanelPage extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                HeaderControlPanel(),
-                BodyControlPanel()
+                HeaderHome(),
+                BodyHome()
               ],
             ),
           )

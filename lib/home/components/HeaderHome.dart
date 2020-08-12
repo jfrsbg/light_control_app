@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HeaderControlPanel extends StatelessWidget {
+class HeaderHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:light_control/control_panel/components/MenuItem.dart';
+import 'package:light_control/home/components/MenuItem.dart';
 
-class BodyControlPanel extends StatelessWidget {
+class BodyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

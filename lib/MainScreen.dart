@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:light_control/control_panel/ControlPanelPage.dart';
+import 'package:light_control/home/HomePage.dart';
 import 'package:light_control/room/RoomPage.dart';
+import 'package:light_control/settings/SettingsPage.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -13,8 +14,8 @@ class _MainScreenState extends State<MainScreen> {
 
   static List<Widget> _widgetOptions = <Widget>[
     RoomPage(),
-    ControlPanelPage(),
-    RoomPage(),
+    HomePage(),
+    SettingsPage(),
   ];
 
   void _onItemTapped(int index) {

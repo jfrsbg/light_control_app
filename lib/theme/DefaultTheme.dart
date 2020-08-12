@@ -17,7 +17,7 @@ class DefaultTheme {
     primaryColorDark: DefaultColors.primaryDark,
     accentColor: DefaultColors.secondary,
     backgroundColor: DefaultColors.background,
-    textTheme: _textThemeDefault(base.textTheme)
+    textTheme: _textThemeDefault(base.textTheme),
   );
 }
 
