@@ -18,6 +18,35 @@ class DefaultTheme {
     accentColor: DefaultColors.secondary,
     backgroundColor: DefaultColors.background,
     textTheme: _textThemeDefault(base.textTheme),
+
+      inputDecorationTheme: InputDecorationTheme(
+        labelStyle: TextStyle(
+          color: DefaultColors.secondary,
+          fontWeight: FontWeight.normal
+        ),
+        contentPadding: new EdgeInsets.all(16),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(25)),
+          borderSide: BorderSide(
+            width: 1,
+            color: DefaultColors.secondary,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(25)),
+          borderSide: BorderSide(
+            width: 1,
+            color: DefaultColors.secondary,
+          ),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(25)),
+          borderSide: BorderSide(
+            width: 1,
+            color: DefaultColors.secondary,
+          ),
+        ),
+      )
   );
 }
 

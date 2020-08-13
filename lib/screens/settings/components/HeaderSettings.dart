@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HeaderSettings extends StatelessWidget {
+  final String title;
+
+  const HeaderSettings({Key key, this.title}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,7 +17,7 @@ class HeaderSettings extends StatelessWidget {
 				Container(
 				  width: 120,
 				  child: Text(
-					"Room Settings",
+					this.title,
 					style: Theme.of(context).textTheme.headline1,
 				  ),
 				),

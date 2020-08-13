@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:light_control/home/components/MenuItem.dart';
+import 'package:light_control/screens/home/components/MenuItem.dart';
 
 class BodyHome extends StatelessWidget {
   @override

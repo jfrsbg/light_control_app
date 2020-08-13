@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:light_control/settings/components/BodySettings.dart';
-import 'package:light_control/settings/components/HeaderSettings.dart';
+import 'package:light_control/AppRoutes.dart';
+import 'package:light_control/screens/settings/components/BodySettings.dart';
+import 'package:light_control/screens/settings/components/HeaderSettings.dart';
 import 'package:light_control/theme/DefaultTheme.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -21,7 +22,7 @@ class SettingsPage extends StatelessWidget {
 				children: <Widget>[
 				  Column(
 					children: <Widget>[
-					  HeaderSettings(),
+					  HeaderSettings(title: "Room Settings",),
 					  BodySettings()
 					],
 				  ),
@@ -31,6 +32,9 @@ class SettingsPage extends StatelessWidget {
 					right: 50,
 					top: 140,
 					child: InkWell(
+					  onTap: (){
+					    Navigator.of(context).pushNamed(AppRoutes.addRoom);
+					  },
 					  child: Container(
 						  decoration: BoxDecoration(
 							  color: Theme.of(context).primaryColor,

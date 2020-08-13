@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:light_control/AppRoutes.dart';
-import 'package:light_control/room/components/CustomSlider.dart';
-import 'package:light_control/room/components/ItemColor.dart';
-import 'package:light_control/room/components/ItemScene.dart';
+import 'package:light_control/screens/room/components/CustomSlider.dart';
+import 'package:light_control/screens/room/components/ItemColor.dart';
+import 'package:light_control/screens/room/components/ItemScene.dart';
 
 class BodyRoom extends StatelessWidget {
   @override

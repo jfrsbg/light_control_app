@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:light_control/home/HomePage.dart';
-import 'package:light_control/room/RoomPage.dart';
-import 'package:light_control/settings/SettingsPage.dart';
+import 'package:light_control/screens/home/HomePage.dart';
+import 'package:light_control/screens/room/RoomPage.dart';
+import 'package:light_control/screens/settings/SettingsPage.dart';
 
 class MainScreen extends StatefulWidget {
   @override

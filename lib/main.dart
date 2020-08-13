@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:light_control/AppRoutes.dart';
 import 'package:light_control/Injectors.dart';
-import 'package:light_control/MainScreen.dart';
+import 'file:///D:/apps/light_control/lib/screens/MainScreen.dart';
 import 'package:light_control/theme/DefaultTheme.dart';
 
 void main() {

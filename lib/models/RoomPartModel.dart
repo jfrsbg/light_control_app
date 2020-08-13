@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class RoomPartsModel{
+class RoomPartModel{
   int id;
   String name;
   Icon icon;

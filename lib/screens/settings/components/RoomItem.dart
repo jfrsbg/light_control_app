@@ -20,7 +20,8 @@ class RoomItem extends StatelessWidget {
 			  child: Column(
 				crossAxisAlignment: CrossAxisAlignment.start,
 			  	children: <Widget>[
-			  	  Text("text here", style: Theme.of(context).textTheme.headline6,),
+			  	  Text("Text here", style: Theme.of(context).textTheme.headline6,),
+			  	  SizedBox(height: 5,),
 			  	  Text("4 Lights", style: Theme.of(context).textTheme.subtitle2,),
 			  	],
 			  ),

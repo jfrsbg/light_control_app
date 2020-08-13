@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:light_control/settings/components/RoomItem.dart';
+import 'package:light_control/screens/settings/components/RoomItem.dart';
 
 class BodySettings extends StatelessWidget {
   @override

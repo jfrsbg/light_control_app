@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get_it/get_it.dart';
-import 'package:light_control/room/components/BodyRoom.dart';
-import 'package:light_control/room/components/HeaderRoom.dart';
+import 'package:light_control/screens/room/components/BodyRoom.dart';
+import 'package:light_control/screens/room/components/HeaderRoom.dart';
 import 'package:light_control/stores/room/RoomStore.dart';
 import 'package:light_control/theme/DefaultTheme.dart';
 

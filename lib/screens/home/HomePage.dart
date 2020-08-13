@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:light_control/home/components/BodyHome.dart';
-import 'package:light_control/home/components/HeaderHome.dart';
+import 'package:light_control/screens/home/components/BodyHome.dart';
+import 'package:light_control/screens/home/components/HeaderHome.dart';
 
 class HomePage extends StatelessWidget {
   @override
