@@ -26,11 +26,26 @@ for my house. I know that are many apps out there with the same purpose, but I r
 # Project details
 * MVVM Archtecture
 * Mobx for state managment
-* Layout separated by components
+* Component based layout
 * Theme based layout
 
 # Todo list
-- [x] done
+- [x] Main Page
+- [x] Room Page
+- [x] Settings Page
+- [x] Add room Page
+- [ ] Page to Add color for room part
+- [ ] Service for using local storage
+- [ ] Service to add room photo (can be local image or camera image)
+- [x] Models for objects
+- [ ] Dialog to add new room part
+- [ ] Add new rooms and save
+- [ ] Make new saved rooms configurable
+  - [ ] Change Light intensity for each room part
+  - [ ] Add new light colors for each room part
+
+** the todo list can grow as the project grows
+
 
 
 # Demo
