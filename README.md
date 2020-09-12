@@ -23,6 +23,19 @@ for my house. I know that are many apps out there with the same purpose, but I r
 
 <p>and run the project in a emulator or real device</p>
 
+# Project details
+* MVVM Archtecture
+* Mobx for state managment
+* Layout separated by components
+* Theme based layout
+
+# Todo list
+- [x] done
+
+
+# Demo
+<img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/demo.gif?raw=true" width="300" >
+
 # Screenshots
 
 <img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/main-menu.png?raw=true" width="300" style="padding-right: 20px">
