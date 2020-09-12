@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:light_control/screens/settings/add_room/components/BodyAddRoom.dart';
 import 'package:light_control/screens/settings/components/HeaderSettings.dart';
-import 'package:light_control/theme/DefaultTheme.dart';
 
 class AddRoomScreen extends StatelessWidget {
   @override
@@ -18,19 +16,19 @@ class AddRoomScreen extends StatelessWidget {
           //Header and Body
           SafeArea(
               child: SingleChildScrollView(
-                child: Stack(
+            child: Stack(
+              children: <Widget>[
+                Column(
                   children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        HeaderSettings(title: "Add Room",),
-                        BodyAddRoom()
-                      ],
+                    HeaderSettings(
+                      title: "Add Room",
                     ),
-                    
+                    BodyAddRoom()
                   ],
                 ),
-              )
-          ),
+              ],
+            ),
+          )),
         ],
       ),
     );

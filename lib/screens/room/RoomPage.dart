@@ -29,49 +29,54 @@ class _RoomPageState extends State<RoomPage> {
         //Header and Body
         SafeArea(
             child: SingleChildScrollView(
-              child: Stack(
+          child: Stack(
+            children: <Widget>[
+              Column(
                 children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      HeaderRoom(
-                        roomName: "Bed Room",
-                        lights: 4,
-                      ),
-                      BodyRoom()
-                    ],
+                  HeaderRoom(
+                    roomName: "Bed Room",
+                    lights: 4,
                   ),
+                  BodyRoom()
+                ],
+              ),
 
-                  //On/Off button
-                  Positioned(
-                    right: 50,
-                    top: 225,
-                    child: InkWell(
-                      onTap: onTap,
-                      child: Container(
-                          decoration: BoxDecoration(
-                              color: Theme.of(context).primaryColor,
-                              borderRadius: BorderRadius.all(Radius.circular(20)),
-                              boxShadow: [
-                                BoxShadow(offset: Offset(1, 1), color: Colors.grey, blurRadius: 5)
-                              ]
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(6.0),
-                            child: Observer(
-                              builder: (_){
-                                return Icon(FontAwesomeIcons.powerOff,
-                                  color: roomStore.lightOn ? DefaultColors.powerOn : DefaultColors.powerOff,
-                                );
-                              },
-                            ),
-                          )
+              //On/Off button
+              Positioned(
+                right: 50,
+                top: 225,
+                child: InkWell(
+                  onTap: onTap,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      boxShadow: [
+                        BoxShadow(
+                            offset: Offset(1, 1),
+                            color: Colors.grey,
+                            blurRadius: 5)
+                      ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Observer(
+                        builder: (_) {
+                          return Icon(
+                            FontAwesomeIcons.powerOff,
+                            color: roomStore.lightOn
+                                ? DefaultColors.powerOn
+                                : DefaultColors.powerOff,
+                          );
+                        },
                       ),
                     ),
                   ),
-                ],
+                ),
               ),
-            )
-        ),
+            ],
+          ),
+        )),
       ],
     );
   }

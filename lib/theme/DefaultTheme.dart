@@ -4,53 +4,98 @@ class DefaultTheme {
   static final ThemeData base = ThemeData();
 
   static TextTheme _textThemeDefault(TextTheme base) => base.copyWith(
-    headline1: TextStyle(color: DefaultColors.primary, fontSize: 32, fontWeight: FontWeight.bold),
-    headline6: TextStyle(color: DefaultColors.gray, fontSize: 22, fontWeight: FontWeight.bold),
-    bodyText1: TextStyle(color: DefaultColors.secondary, fontSize: 22, fontWeight: FontWeight.bold),
-    bodyText2: TextStyle(color: DefaultColors.primary, fontSize: 16, fontWeight: FontWeight.bold),
-    subtitle1: TextStyle(color: DefaultColors.secondary, fontSize: 16, fontWeight: FontWeight.bold),
-    subtitle2: TextStyle(fontSize: 16, color: DefaultColors.orange, fontWeight: FontWeight.bold),
-  );
+        headline1: TextStyle(
+          color: DefaultColors.primary,
+          fontSize: 32,
+          fontWeight: FontWeight.bold,
+        ),
+        headline6: TextStyle(
+          color: DefaultColors.gray,
+          fontSize: 22,
+          fontWeight: FontWeight.bold,
+        ),
+        bodyText1: TextStyle(
+          color: DefaultColors.secondary,
+          fontSize: 22,
+          fontWeight: FontWeight.bold,
+        ),
+        bodyText2: TextStyle(
+          color: DefaultColors.primary,
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+        ),
+        subtitle1: TextStyle(
+          color: DefaultColors.secondary,
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+        ),
+        subtitle2: TextStyle(
+          fontSize: 16,
+          color: DefaultColors.orange,
+          fontWeight: FontWeight.bold,
+        ),
+      );
 
   static ThemeData themeDataDefault() => base.copyWith(
-    primaryColor: DefaultColors.primary,
-    primaryColorDark: DefaultColors.primaryDark,
-    accentColor: DefaultColors.secondary,
-    backgroundColor: DefaultColors.background,
-    textTheme: _textThemeDefault(base.textTheme),
-
-      inputDecorationTheme: InputDecorationTheme(
-        labelStyle: TextStyle(
-          color: DefaultColors.secondary,
-          fontWeight: FontWeight.normal
+        primaryColor: DefaultColors.primary,
+        primaryColorDark: DefaultColors.primaryDark,
+        accentColor: DefaultColors.secondary,
+        backgroundColor: DefaultColors.background,
+        textTheme: _textThemeDefault(base.textTheme),
+        cardTheme: CardTheme(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(20),
+            ),
+          ),
+          elevation: 5,
         ),
-        contentPadding: new EdgeInsets.all(16),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(25)),
-          borderSide: BorderSide(
-            width: 1,
+        inputDecorationTheme: InputDecorationTheme(
+          labelStyle: TextStyle(
             color: DefaultColors.secondary,
+            fontWeight: FontWeight.normal,
+          ),
+          contentPadding: new EdgeInsets.all(16),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(25)),
+            borderSide: BorderSide(
+              width: 1,
+              color: DefaultColors.secondary,
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(25)),
+            borderSide: BorderSide(
+              width: 1,
+              color: DefaultColors.secondary,
+            ),
+          ),
+          disabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(25)),
+            borderSide: BorderSide(
+              width: 1,
+              color: DefaultColors.secondary,
+            ),
           ),
         ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(25)),
-          borderSide: BorderSide(
-            width: 1,
+        dialogTheme: DialogTheme(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(15),
+            ),
+          ),
+          backgroundColor: DefaultColors.primary,
+          elevation: 5,
+          titleTextStyle: TextStyle(
             color: DefaultColors.secondary,
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
           ),
         ),
-        disabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(25)),
-          borderSide: BorderSide(
-            width: 1,
-            color: DefaultColors.secondary,
-          ),
-        ),
-      )
-  );
+      );
 }
 
-class DefaultColors{
+class DefaultColors {
   static Color primary = Colors.white;
   static Color primaryDark = Color(0xff093B7B);
   static Color secondary = Color(0xff1453a6);
@@ -62,4 +107,3 @@ class DefaultColors{
   static Color powerOn = Color(0xff94eb9e);
   static Color powerOff = Color(0xfffa9595);
 }
-
