@@ -17,7 +17,21 @@ for my house. I know that are many apps out there with the same purpose, but I r
 <p>I'm thinking about add support for Xiaomi Yeelight and other Smart Lights that have a SDK, but first I need to finish the main idea of the app</p>
 
 # How to execute
-<p>Just clone the repository, run the ```flutter pub get``` command and run the project</p>
+<p>Just clone the repository and run the command: </p>
+
+```flutter pub get```
+
+<p>and run the project in a emulator or real device</p>
 
 # Screenshots
 
+<img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/main-menu.png?raw=true" width="300" style="padding-right: 20px">
+
+<img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/room.png?raw=true" width="300">
+
+<br>
+<br>
+
+<img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/room-settings.png?raw=true" width="300" style="padding-right: 20px">
+
+<img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/add-room.png?raw=true" width="300">
