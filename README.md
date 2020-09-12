@@ -53,13 +53,13 @@ for my house. I know that are many apps out there with the same purpose, but I r
 
 # Screenshots
 
-<img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/main-menu.png?raw=true" width="300" style="padding-right: 20px">
+<img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/main-menu.png?raw=true" width="300" style="padding-right: 5px">
 
 <img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/room.png?raw=true" width="300">
 
 <br>
 <br>
 
-<img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/room-settings.png?raw=true" width="300" style="padding-right: 20px">
+<img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/room-settings.png?raw=true" width="300" style="padding-right: 5px">
 
 <img src="https://github.com/jfrsbg/light_control_app/blob/master/assets/images/screenshots/add-room.png?raw=true" width="300">
